@@ -55,11 +55,10 @@ $ROOT: shared.makeRoot("Text");
 
     &:hover {
       @apply cursor-pointer text-brand-500;
+    }
 
-      [style="dark"] & {
-      }
-      [style="light"] & {
-      }
+    &:active {
+      @apply text-brand-400;
     }
   }
 }

@@ -1,0 +1,32 @@
+@use "../../utils/shared";
+
+$ROOT: shared.makeRoot("Footer");
+@function el($name) {
+  @return shared.makeSubElementName($ROOT, $name);
+}
+
+#{$ROOT} {
+  @apply flex justify-center items-center w-full space-x-[8px];
+  @apply bg-brand-500 text-brand-100;
+
+  &.size-small {
+    @apply h-12;
+  }
+  &.size-medium {
+    @apply h-16;
+  }
+  &.size-large {
+    @apply h-20;
+  }
+}
+
+#{el('link')} {
+  &.is-interactable {
+    &:hover {
+      @apply text-brand-300;
+    }
+    &:active {
+      @apply text-brand-400;
+    }
+  }
+}

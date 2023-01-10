@@ -14,7 +14,7 @@ export type TextProps = StyleProps & {
   /**
    * content of the text
    */
-  children: ReactElement | string;
+  children: ReactElement | string | string[];
 
   /**
    * the size of the text
