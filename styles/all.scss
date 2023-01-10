@@ -1,0 +1,7 @@
+@use "global.scss" as global;
+@use "/components/all.scss" as components-all;
+@use "/features/all.scss" as features-all;
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

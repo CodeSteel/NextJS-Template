@@ -1,0 +1,10 @@
+@use "../../utils/shared";
+
+$ROOT: shared.makeRoot("BaseComponent");
+@function el($name) {
+  @return shared.makeSubElementName($ROOT, $name);
+}
+
+#{$ROOT} {
+  // ...
+}
