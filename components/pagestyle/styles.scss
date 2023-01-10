@@ -1,0 +1,23 @@
+@use "../../utils/shared";
+
+$ROOT: shared.makeRoot("PageStyle");
+@function el($name) {
+  @return shared.makeSubElementName($ROOT, $name);
+}
+
+#{$ROOT} {
+}
+
+#{el('icon')} {
+  #{$ROOT}.size-small & {
+    @apply w-[16px] h-[16px];
+  }
+
+  #{$ROOT}.size-medium & {
+    @apply w-[24px] h-[24px];
+  }
+
+  #{$ROOT}.size-large & {
+    @apply w-[32px] h-[32px];
+  }
+}

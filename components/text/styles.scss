@@ -1,0 +1,65 @@
+@use "../../utils/shared";
+
+$ROOT: shared.makeRoot("Text");
+@function el($name) {
+  @return shared.makeSubElementName($ROOT, $name);
+}
+
+#{$ROOT} {
+  &.size-h1 {
+    @apply text-4xl font-bold;
+  }
+
+  &.size-h2 {
+    @apply text-3xl font-bold;
+  }
+
+  &.size-h3 {
+    @apply text-2xl font-bold;
+  }
+
+  &.size-h4 {
+    @apply text-xl font-bold;
+  }
+
+  &.size-h5 {
+    @apply text-lg font-bold;
+  }
+
+  &.size-h6 {
+    @apply text-base font-bold;
+  }
+
+  &.size-p {
+    @apply text-base;
+  }
+
+  &.size-small {
+    @apply text-sm;
+  }
+
+  &.size-base {
+    @apply text-base;
+  }
+
+  &.size-large {
+    @apply text-lg;
+  }
+
+  &.is-linked {
+    @apply underline underline-offset-4;
+  }
+
+  &.is-interactable {
+    @apply transition-colors duration-200 ease-in-out;
+
+    &:hover {
+      @apply cursor-pointer text-brand-500;
+
+      [style="dark"] & {
+      }
+      [style="light"] & {
+      }
+    }
+  }
+}

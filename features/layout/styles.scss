@@ -6,5 +6,8 @@ $ROOT: shared.makeRoot("Layout");
 }
 
 #{$ROOT} {
-  @apply bg-black w-full min-h-screen text-white;
+}
+
+#{el('pagestyle')} {
+  @apply absolute right-[20px] top-[20px];
 }

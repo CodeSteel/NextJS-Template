@@ -1,0 +1,1 @@
+export { PageStyle } from "./PageStyle";
